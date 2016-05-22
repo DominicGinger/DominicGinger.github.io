@@ -1,0 +1,33 @@
+body {
+  font-family: monospace;
+  background-color: #FAFAFA;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+#header {
+  margin-bottom: 20px;
+}
+
+#title {
+  font-size: 24px;
+  margin-right: 20px;
+  border-radius: 2px;
+}
+
+#title:hover {
+  background-color: #E0E0E0;
+}
+
+#about {
+  font-size: 14px;
+  border-radius: 2px;
+}
+
+#about:hover {
+  background-color: #E0E0E0;
+}
+

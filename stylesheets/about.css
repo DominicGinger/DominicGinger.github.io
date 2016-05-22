@@ -1,0 +1,11 @@
+#about-main {
+  text-align: center;
+}
+
+#about-main p a {
+  border-radius: 2px;
+}
+
+#about-main p a:hover {
+  background-color: #E0E0E0;
+}
