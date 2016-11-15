@@ -24,24 +24,29 @@ $(document).ready(function() {
   context.font='20px monospace';
 
   $(window).resize(function(e) {
+    e.preventDefault();
     setSize();
   });
 
   $('#' + id).on('mousedown touchstart', function(e) {
+    e.preventDefault();
     painting = true;
     paint(e.pageX, e.pageY);
   });
 
   $('#' + id).on('mousemove', function(e) {
+    e.preventDefault();
     if (painting) paint(e.pageX, e.pageY);
   });
 
   $('#' + id).on('touchmove', function(e) {
+    e.preventDefault();
     var t = e.changedTouches[0]
     if (painting) paint(t.clientX, t.clientY);
   });
 
   $('#' + id).on('mouseup mouseleave touchend', function(e) {
+    e.preventDefault();
     painting = false;
   });
 });
