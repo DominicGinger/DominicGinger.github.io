@@ -15,8 +15,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     '. Excepteur','sint', 'occaecat', 'cupidatat', 'non', 'proiden', ', sunt', 'in', 'culpa', 'qui', 'officia', 'deserunt', 'mollit', 'anim', 'id', 'est', 'laborum.'];
 
   setSize();
-  context.lineWidth = 2;
-  context.font = drawingFont;
 
   function getWord() {
     return words[Math.floor(Math.random() * words.length)];
@@ -41,11 +39,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if(canDraw(newX, newY, word.length)) {
       draw(word, newX, newY);
     }
-  };
+  }
 
   function setSize() {
     context.canvas.width = window.innerWidth;
     context.canvas.height = window.innerHeight;
+    context.lineWidth = 2;
+    context.font = drawingFont;
   }
 
   function mouseDown(e) {
@@ -74,6 +74,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   canvas.addEventListener('mouseup', mouseUp);
   document.addEventListener('mouseleave', mouseUp);
   canvas.addEventListener('touchend', mouseUp);
+
+  window.addEventListener('resize', setSize);
 
   function draw(word, paintX, paintY) {
     context.fillText(word, paintX, paintY);
