@@ -1,26 +1,26 @@
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #FAFAFA;
+  background-color: white
   text-align: center;
   font-size: 2em;
-}
-
-.top {
-  font-size: 1.5em;
 }
 
 .card {
   position: absolute;
   left: 50%;
   text-align: left;
+  user-select: none;
 }
 
 .card .inner {
   position: relative;
   left: -50%;
-  background-color: #E8E8EE;
   padding: 2%;
   padding-right: 7%;
+  padding-left: 7%;
+  top: 8em;
+  background-color: white;
+  width: 100%;
 }
 
 a:hover {
