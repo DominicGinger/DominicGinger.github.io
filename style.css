@@ -1,17 +1,26 @@
 body {
-  font-family: monospace;
+  font-family: 'Roboto', sans-serif;
   background-color: #FAFAFA;
   text-align: center;
   font-size: 2em;
 }
 
-#top {
+.top {
   font-size: 1.5em;
 }
 
-#content {
-  display: inline-block;
+.card {
+  position: absolute;
+  left: 50%;
   text-align: left;
+}
+
+.card .inner {
+  position: relative;
+  left: -50%;
+  background-color: #E8E8EE;
+  padding: 2%;
+  padding-right: 7%;
 }
 
 a:hover {
@@ -30,4 +39,13 @@ ul {
 
 li {
   margin-bottom: 30px;
+}
+
+#content {
+  display: block;
+  min-height: 100%;
+}
+
+#paintMe {
+  min-height: 100%;
 }
